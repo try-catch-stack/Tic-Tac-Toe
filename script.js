@@ -27,11 +27,38 @@ function playSound(name) {
 function home() {
     document.getElementById("table-container").style.display = "none";
     document.getElementById("startPage").style.display = "flex";
-	document.getElementById("endPage").style.display = "none";
+  	document.getElementById("endPage").style.display = "none";
+}
+
+function startSinglePlayer() {
+    document.getElementById("table-container").style.display = "flex";
+    document.getElementById("whoStarts").style.display = "none";
+    choicesIndex=[0,1,2,3,4,5,6,7,8];
+    gameOver=false;
+    origBoard = Array.from(Array(9).keys());
+
+    if (document.getElementById("Computer").checked){
+      // computerFirst();
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].innerText = '';
+        cells[i].classList.remove("won")
+        cells[i].addEventListener('click', turnClick, false); 
+      }
+      computersTurn(); 
+    }else{
+      for (var i = 0; i < cells.length; i++) {
+        cells[i].innerText = '';
+        cells[i].classList.remove("won")
+        cells[i].addEventListener('click', turnClick, false);
+      }
+      
+    }  
+  
 }
 
 
 function startGame() {
+ 
 
     if(document.getElementById("X").checked){
         player1="X" 
@@ -40,7 +67,12 @@ function startGame() {
         player1="O"
         player2="X"
     }
-
+    if (document.getElementById("onePlayer").checked){
+      document.getElementById("endPage").style.display = "none";
+      document.getElementById("whoStarts").style.display="flex";
+      document.getElementById("startPage").style.display = "none";
+      return;
+    }
     choicesIndex=[0,1,2,3,4,5,6,7,8];
     gameOver=false;
     document.getElementById("table-container").style.display = "flex";
@@ -52,15 +84,25 @@ function startGame() {
 		cells[i].classList.remove("won")
 		cells[i].addEventListener('click', turnClick, false);
 	}
+
+}
+function turnClick(cell) {
+    turn(cell.target.id)
 }
 
-function turnClick(square) {
-	
-    turn(square.target.id)
+function computerFirst(){
+  document.getElementById("table-container").style.display = "flex";
+  document.getElementById("whoStarts").style.display="none";
+  computersTurn();
+  origBoard = Array.from(Array(9).keys());
+	for (var i = 0; i < cells.length; i++) {
+		cells[i].innerText = '';
+		cells[i].classList.remove("won")
+		cells[i].addEventListener('click', turnClick, false);
+	}
 }
 
-
-function turn(squareId) {
+function turn(cellId) {
 	if(document.getElementById("twoPlayers").checked){
         if(player===player1){
             player=player2;
@@ -71,10 +113,10 @@ function turn(squareId) {
         player=player1;
     }
     playSound(player)
-    choicesIndex=choicesIndex.filter(item => item !== parseInt(squareId));
-    origBoard[squareId] = player;
-    document.getElementById(squareId).innerText = player;
-    document.getElementById(squareId).removeEventListener("click",turnClick, false);
+    choicesIndex=choicesIndex.filter(item => item !== parseInt(cellId));
+    origBoard[cellId] = player;
+    document.getElementById(cellId).innerText = player;
+    document.getElementById(cellId).removeEventListener("click",turnClick, false);
     checkBoard();
     if(!gameOver && document.getElementById("onePlayer").checked){
     computersTurn();
