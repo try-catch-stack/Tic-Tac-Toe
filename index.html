@@ -27,22 +27,22 @@
 		</div>
 	</nav>
 	<div id="startPage">
-		<h2 class="text-info">Number of players</h2>
+		<p class="h1 text-info">Number of players</p>
 		<div class="btn-group1" role="group" aria-label="Basic radio toggle button group">
-			<input type="radio" class="btn-check" name="btn-grp1" id="btnradio1" autocomplete="off" checked>
-			<label class="btn btn-outline-primary" for="btnradio1">1 player</label>
+			<input type="radio" class="btn-check" name="btn-grp1" id="onePlayer" autocomplete="off" checked>
+			<label class="btn btn-outline-primary btn-lg" for="onePlayer"><h2 id="btn1">1 player</h2></label>
 
-			<input type="radio" class="btn-check" name="btn-grp1" id="btnradio2" autocomplete="off">
-			<label class="btn btn-outline-primary" for="btnradio2">2 players</label>
+			<input type="radio" class="btn-check" name="btn-grp1" id="twoPlayers" autocomplete="off">
+			<label class="btn btn-outline-primary" for="twoPlayers"><h2>2 players</h2></label>
 
 		</div>
-		<h2 class="text-info">What do you want take?</h2>
+		<p class="h1 text-info">What do you want take?</p>
 		<div class="btn-group2" role="group" aria-label="Basic radio toggle button group">
-			<input type="radio" class="btn-check" name="btn-grp2" id="btnradio3" autocomplete="off" checked>
-			<label class="btn btn-outline-primary" for="btnradio3">X</label>
+			<input type="radio" class="btn-check" name="btn-grp2" id="X" autocomplete="off" checked>
+			<label class="btn btn-outline-primary" for="X"><h2>X</h2></label>
 
-			<input type="radio" class="btn-check" name="btn-grp2" id="btnradio4" autocomplete="off">
-			<label class="btn btn-outline-primary" for="btnradio4">O</label>
+			<input type="radio" class="btn-check" name="btn-grp2" id="O" autocomplete="off">
+			<label class="btn btn-outline-primary" for="O"><h2>O</h2></label>
 
 		</div>
 		<button class="btn btn-lg btn-success" onclick="startGame()">START</button>
@@ -73,7 +73,8 @@
 	</div>
 	<div class="end" id="endPage">
 		<div class="conatiner-fluid" id="winMessage"></div>
-		<button class="btn btn-lg btn-success" id="restartBtn" onclick="startGame()">RESTART</button>
+		<button class="btn btn-lg btn-success" id="restartBtn" onclick="startGame()"><h2>PLAY AGAIN</h2></button>
+		<br><button class="btn btn-lg btn-primary" id="homeBtn" onclick="home()"><h2>HOME</h2></button>
 	</div>
 	<div class="bottom-container" id="contact-page">
 		<div class="made-by">

@@ -1,29 +1,15 @@
 html { font-size:100%; } 
 
-@media (min-width: 350px) {
-.bottom-container{font-size: 20px;}
+@media only screen and (min-width:400px) {
 
-.copyright {font-size:15px;} 
+.bottom-container{font-size: 20px;}
+.copyright {font-size:1rem;} 
 
 td {
 	height:  7rem;
 	width:  7rem;
 	
 }
-}
-
-
-@media (min-width: 800px) {
-.bottom-container{font-size: 25px;}
-
-.copyright {font-size:10px;}
-
-td {
-	height: 15rem;
-	width:  15rem;
-	
-}
-
 table {
 	border-collapse: collapse;
 	position: relative;
@@ -31,14 +17,34 @@ table {
 	margin-left: -22rem;
 	top: 25rem;
 }
-
 }
 
 
-@media (min-width: 1000px) { 
-.bottom-container{font-size: 12px} ;
+@media only screen and (min-width:800px) {
 
-.copyright {font-size:10px;} 
+.bottom-container{font-size: 25px;}
+.copyright {font-size:1rem;}
+
+td {
+	height: 11.5rem;
+	width:  11.5rem;
+	
+}
+
+table {
+	border-collapse: collapse;
+	position: relative;
+	left: 50%;
+	margin-left: -17rem;
+	top: 25rem;
+}
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+.bottom-container{font-size: 14px} ;
+.copyright {font-size:1rem;} 
 
 td {
 	height:  7rem;
@@ -57,7 +63,7 @@ table {
 }
 
 label{
-	margin: 40px 20px;
+	margin: 20px 10px;
 }
 
 td {
@@ -116,7 +122,7 @@ table tr td:last-child {
 #winMessage {
 	font-size: 5rem;
 	color: white;
-	margin: 5rem;
+	margin: 2rem;
 }
 .navbar-brand{
 	font-size:3rem;
@@ -133,7 +139,7 @@ img{
 	bottom:0;
 	text-align:center;
 	background-color: #393e46;
-	padding: 20px 0 20px;
+	padding: 20px 0;
   }
 
   .made-by{
@@ -190,3 +196,7 @@ a:hover {
 }
 
 #table-container{display:none;}
+
+
+
+
