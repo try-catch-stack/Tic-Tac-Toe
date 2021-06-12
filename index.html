@@ -12,6 +12,11 @@
 		rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="images/fav.ico">
 
@@ -28,34 +33,46 @@
 		</div>
 	</nav>
 	<div id="startPage">
-		<p class="h1 text-info">Number of players</p>
+		<p class="h1 text-info info">Number of players</p>
 		<div class="btn-group1" role="group" aria-label="Basic radio toggle button group">
 			<input type="radio" class="btn-check" name="btn-grp1" id="onePlayer" autocomplete="off" checked>
-			<label class="btn btn-outline-primary btn-lg" for="onePlayer"><h2 id="btn1">1 player</h2></label>
+			<label class="btn btn-outline-primary btn-lg" for="onePlayer">
+				<h2 id="btn1">1 player</h2>
+			</label>
 
 			<input type="radio" class="btn-check" name="btn-grp1" id="twoPlayers" autocomplete="off">
-			<label class="btn btn-outline-primary" for="twoPlayers"><h2>2 players</h2></label>
+			<label class="btn btn-outline-primary" for="twoPlayers">
+				<h2>2 players</h2>
+			</label>
 
 		</div>
-		<p class="h1 text-info">What do you want take?</p>
+		<p class="h1 text-info info">What do you want to take?</p>
 		<div class="btn-group2" role="group" aria-label="Basic radio toggle button group">
 			<input type="radio" class="btn-check" name="btn-grp2" id="X" autocomplete="off" checked>
-			<label class="btn btn-outline-primary" for="X"><h2>X</h2></label>
+			<label class="btn btn-outline-primary" for="X">
+				<h2>X</h2>
+			</label>
 
 			<input type="radio" class="btn-check" name="btn-grp2" id="O" autocomplete="off">
-			<label class="btn btn-outline-primary" for="O"><h2>O</h2></label>
+			<label class="btn btn-outline-primary" for="O">
+				<h2>O</h2>
+			</label>
 
 		</div>
 		<button class="btn btn-lg btn-success" onclick="startGame()">START</button>
 	</div>
 	<div id="whoStarts">
-		<p class="h1 text-info">Who will start first?</p>
+		<p class="h1 text-info info">Who will start first?</p>
 		<div class="btn-group3" role="group" aria-label="Basic radio toggle button group">
 			<input type="radio" class="btn-check" name="btn-grp3" id="Me" autocomplete="off" checked>
-			<label class="btn btn-outline-primary btn-lg" for="Me"><h2 id="btn1">Me</h2></label>
+			<label class="btn btn-outline-primary btn-lg" for="Me">
+				<h2 id="btn1">Me</h2>
+			</label>
 
 			<input type="radio" class="btn-check" name="btn-grp3" id="Computer" autocomplete="off">
-			<label class="btn btn-outline-primary" for="Computer"><h2>Computer</h2></label>
+			<label class="btn btn-outline-primary" for="Computer">
+				<h2>Computer</h2>
+			</label>
 
 		</div>
 		<button class="btn btn-lg btn-success" onclick="startSinglePlayer()">START</button>
@@ -86,7 +103,9 @@
 	</div>
 	<div class="end" id="endPage">
 		<div class="conatiner-fluid" id="winMessage"></div>
-		<button class="btn btn-lg btn-success" id="restartBtn" onclick="home()"><h2>PLAY AGAIN</h2></button>
+		<button class="btn btn-lg btn-success" id="restartBtn" onclick="home()">
+			<h2>PLAY AGAIN</h2>
+		</button>
 		<!-- <br><button class="btn btn-lg btn-primary" id="homeBtn" onclick="home()"><h2>HOME</h2></button> -->
 	</div>
 	<div class="bottom-container" id="contact-page">

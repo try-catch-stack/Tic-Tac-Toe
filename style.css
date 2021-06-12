@@ -17,6 +17,7 @@ table {
 	margin-left: -22rem;
 	top: 25rem;
 }
+.info{font-size: 4rem;}
 }
 
 
@@ -59,7 +60,21 @@ table {
 	margin-left: -10rem;
 	top: 100px;
 }
+.info{font-size: 3rem;}
+}
 
+
+
+
+.navbar-brand{
+	font-family: 'Staatliches', cursive;
+}
+
+h2{
+	font-family: 'Cormorant Garamond', serif;
+}
+.info{
+	font-family: 'Amatic SC', cursive;
 }
 
 label{
