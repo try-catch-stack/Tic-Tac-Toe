@@ -1,4 +1,4 @@
-#Tic Tac Toe
+# Tic Tac Toe
 
 **You can play the game** [here.](https://try-catch-stack.github.io/Tic-Tac-Toe/)
 
